@@ -1,0 +1,41 @@
+# Este código é um exemplo educacional para automação de formulários
+# em um ambiente controlado de teste, e não deve ser usado para
+# acessar sites reais como o LinkedIn.
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+
+# 1. Configurar o WebDriver
+# Você precisaria ter o Chrome/Firefox driver instalado
+driver = webdriver.Chrome() 
+
+# 2. Abrir uma URL genérica (EXEMPLO)
+driver.get("https://exemplo-site-de-teste.com/login") 
+
+# 3. Localizar os campos de usuário e senha (usando nomes genéricos)
+try:
+    //#######################################################################################################
+    //campo_usuario = driver.find_element(By.ID, "ricardo.oliveira95@fatec.sp.gov.br")
+    //campo_senha = driver.find_element(By.ID, "rcx22101") //facebook // linkedin
+
+    campo_usuario = driver.find_element(By.ID, "username")
+    campo_senha = driver.find_element(By.ID, "password")
+    
+    
+    # 4. Inserir dados de teste
+    campo_usuario.send_keys("usuario_de_teste")
+    campo_senha.send_keys("senha_invalida")
+    
+    # 5. Localizar e clicar no botão de login
+    botao_login = driver.find_element(By.NAME, "loginButton")
+    botao_login.click()
+    
+    # 6. Adicionar lógica de verificação de sucesso/falha
+    print("Tentativa de login enviada.")
+
+except Exception as e:
+    print(f"Ocorreu um erro na automação: {e}")
+
+finally:
+    # 7. Fechar o navegador ao terminar
+    driver.quit()
