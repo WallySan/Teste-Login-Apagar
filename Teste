@@ -17,7 +17,8 @@ try:
     //#######################################################################################################
     //campo_usuario = driver.find_element(By.ID, "ricardo.oliveira95@fatec.sp.gov.br")
     //campo_senha = driver.find_element(By.ID, "rcx22101") //facebook // linkedin
-    //RG335336395//CPF29132182880
+    //Cadastro: CampoRG9796444-X CampoCPF12915444889
+
 
     campo_usuario = driver.find_element(By.ID, "username")
     campo_senha = driver.find_element(By.ID, "password")
